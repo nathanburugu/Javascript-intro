@@ -302,7 +302,11 @@ console.log(drink2)
 //we can use th ternary operator in a template literals as it is an expression
 console.log( `i like to drink ${agey >= 18 ? 'wine' : 'water'}`)
 //coding challange 4
-const bill = 430
+const bill = 40
 const tip = bill >= 50 &&  bill <= 300 ? 15 / 100 * bill : 20/100 * bill;
 console.log(tip)
 console.log(`the bill was ${bill}, the tip was ${tip} and the total was ${tip + bill}`)
+
+for(let i = 1;  i < 5 ; i++ ){
+    console.log(i);
+} 
