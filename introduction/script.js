@@ -244,3 +244,65 @@ if (koalasMarks > dolphinesMarks && koalasMarks > 100) {
         console.log("the we can say nobody wins tonight");
     }
 
+    //the switch statement 
+const day = "tuesday";
+switch(day){
+    case "monday":
+        console.log("PlanCourse structure");
+        console.log("Go to School Fool");
+        break;
+    case "tuesday":
+        console.log("PREPARE THEORY VIDEO");
+        break;
+    case "wednesday":
+    case "thursday":
+        console.log("Write Code Example");
+         break;
+    case "friday":
+        console.log("Enjoy the weekend");
+    case "saturday":
+    case "sunday":
+        console.log("Enjoy the weekend");
+        break;
+    default:
+        console.log("Not A Valid day");
+}
+//same code using the if statement
+const siku = "tuesday"
+if (siku === "monday"){
+    console.log("Yay its Monday!");
+} else if (siku === "tuesday") {
+    console.log ("Titties Tuesday !");
+} else if (siku === "wednesday"){
+    console.log ("Woman Crush Wednesday");
+} else if( siku=== "thursday" || siku ==="friday") {
+    console.log("wRITE cODE eXAMPLES");
+} else if (siku === "saturday" || siku ==="sunday") {
+    console.log("ejoy the weekend");
+}else {
+    console.log("sorry invalid day")
+}
+
+//the conditional operator or ternary operator
+const agey = 18;
+// agey >= 18 ? console.log("i like to drink soda!🥤🥤"):
+// console.log("i like to drink water 💦");
+const drink = agey >= 18 ? "wine🍷" : "soda🥤";
+    console.log(drink);
+
+// same code with if else statement
+let drink2;
+if (agey >= 18) {
+    drink2 = "wine🍷";
+}else {
+    drink2 = "soda🥤" 
+}
+console.log(drink2)
+
+//we can use th ternary operator in a template literals as it is an expression
+console.log( `i like to drink ${agey >= 18 ? 'wine' : 'water'}`)
+//coding challange 4
+const bill = 430
+const tip = bill >= 50 &&  bill <= 300 ? 15 / 100 * bill : 20/100 * bill;
+console.log(tip)
+console.log(`the bill was ${bill}, the tip was ${tip} and the total was ${tip + bill}`)
