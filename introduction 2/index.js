@@ -78,5 +78,65 @@ function juiceMaker(apples, oranges) {
  return juiz;
 }
 console.log(juiceMaker(3, 5));
+// reviweing javascript
+const calMiakaa = function (birthYeah) {
+    return 2022 - birthYeah;
+}
+
+const miakaUntilRetirement = function (birthYeah, fName) {
+    const age = calMiakaa(birthYeah);
+    const retirement = 65 - age;
+    // return retirement;
+    // return `${fName} retires in ${retirement} years`
+    if(retirement > 0){
+        return `${fName} retires in ${retirement} years`
+    } else {
+        return `${fName}  retired already`
+    }
+}
+const miakaImebaki = miakaUntilRetirement(1943, "Cate");
+console.log(miakaImebaki);
+//Quiz one on functions my way 
+const calcAverage2 = (score1, score2, score3) => {
+    const averageScore = (score1 + score2 + score3) / 3;
+    return averageScore;
+}
+const dollAverage = calcAverage2(85, 54, 41);
+const koalasAverage = calcAverage2(23, 34, 27);
+console.log(dollAverage, koalasAverage);
+function checkWinner(dollAverage, koalasAverage) {
+    if(dollAverage > koalasAverage && dollAverage > (koalasAverage * 2)){//the way i used the AND operator is a longer way of doing it there is actually a shorter and easier eay of doing it instead just say dollAverage => koalasAverage * 2
+        return `Dolphines win (${dollAverage} vs ${koalasAverage})`
+    }else if (koalasAverage > dollAverage && koalasAverage > (dollAverage * 2)){
+        return `Koalas win (${dollAverage} vs ${koalasAverage})`
+    } else {
+        return `Unluckily none won!`
+    }
+}
+const winner = checkWinner(dollAverage, koalasAverage);
+console.log(winner);
+//i got it right but the lecturers is shorter
+const hesabuAverage = (a, b, c) =>  (a + b + c) / 3;
+//test 1
+let scoreFish = hesabuAverage(44, 23, 71);
+let scoreSungura = hesabuAverage(65,54,49);
+console.log(scoreFish, scoreSungura);
+const checkwinner2 = function(avgDolphines, avgKoalas) {
+    if(avgDolphines >= 2 * avgKoalas){
+        console.log(`Dolphines win the trophy🏆🏆 (${avgDolphines} vs ${avgKoalas})`)
+    } else if (avgKoalas >= 2 * avgDolphines){
+        console.log(`Koalas win the trophy🏆🏆 (${avgDolphines} vs ${avgKoalas})`)
+    } else {
+        console.log(`Unluckily none won!`)
+    }
+}
+const mshindi = checkwinner2(scoreFish, scoreSungura);
+//score 2
+scoreFish = hesabuAverage(85, 54, 41);
+scoreSungura = hesabuAverage(23, 34, 27);
+console.log(scoreFish, scoreSungura);
+checkwinner2(scoreFish, scoreSungura);
+
+
 
 
