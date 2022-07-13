@@ -138,5 +138,67 @@ console.log(scoreFish, scoreSungura);
 checkwinner2(scoreFish, scoreSungura);
 
 
+//from 7pm to 
+ const friend = ["nate", "sate", "kate", "date"];
+ console.log(friend);
+ const years = new Array(1999, 1998, 1997, 1996);
+ console.log(years);
+ console.log(friend[0]);
+ console.log(friend.length);
+ console.log(friend[friend.length - 1 ]);
+ friend[2] = "jay";
+ console.log(friend);
 
+ const nate = ["nate", "Burugu", "Nairobi", "Kenya", 2022 - 1998, friend, "Developer"];
+ console.log(nate);
 
+ //simple excercise
+ const hesabuMiaka = function(birthYeah) {
+    return 2022 - birthYeah;
+ }
+ const yearz = [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019];
+ const when = hesabuMiaka(yearz[8]);
+ const when2= hesabuMiaka(yearz[4]);
+ const when3 = hesabuMiaka(yearz[15]);
+
+ const whens = [when, when2, when3];
+ console.log(whens);
+// BASIC ARRAY OPERATIONS (push, pop, shift, unshift, splice, slice, sort, reverse)
+// push
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const newLength = numbers.push(13);
+console.log(numbers);
+console.log(newLength);
+// unshift
+numbers.unshift('john');
+console.log(numbers);
+//pop
+numbers.pop();
+console.log(numbers);
+// shift
+numbers.shift();
+console.log(numbers);
+
+console.log(numbers.indexOf(3));
+console.log(numbers.includes(5));
+
+// coding challange 2 how i did it
+function calcTip(bill) {
+    if (bill >= 50 && bill <= 300){
+        return bill * (15 / 100);
+    }else {
+        return bill * (20 / 100);
+    }
+}
+const bills = [125, 555, 44];
+const tipz = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+const totals = [bills[0] + tipz[0], bills[1] + tipz[1], bills[2] + tipz[2]];
+const tip = calcTip(bills[0]);
+const totalZ = bills[0] + tip;
+console.log(tip);
+console.log(totals, tipz);
+
+// how it was done in the lecture
+const pangaChai = function(billYako){
+    return billYako >= 50 && billYako <= 300 ? billYako * (15 / 100) : billYako * (20 / 100);
+}
