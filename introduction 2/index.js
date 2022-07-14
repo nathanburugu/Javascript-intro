@@ -151,6 +151,7 @@ checkwinner2(scoreFish, scoreSungura);
 
  const nate = ["nate", "Burugu", "Nairobi", "Kenya", 2022 - 1998, friend, "Developer"];
  console.log(nate);
+ console.log(`nate has ${nate.length} friends, his best friend is ${nate[0]}`);
 
  //simple excercise
  const hesabuMiaka = function(birthYeah) {
@@ -202,3 +203,33 @@ console.log(totals, tipz);
 const pangaChai = function(billYako){
     return billYako >= 50 && billYako <= 300 ? billYako * (15 / 100) : billYako * (20 / 100);
 }
+const natez = {
+    fName: 'Nathan',
+    lName: "Burugu",
+    birthYear: 1999,
+    job: "Student",
+    school: "KCA",
+    hasDriversLicence: true,
+
+    calcAge : function(birthYear){
+    return 2022 - birthYear
+    }
+};
+console.log(natez.calcAge(1912));
+console.log(natez);
+console.log(natez.lName);
+console.log(natez["fName"]);
+
+const nameKey = "Name";
+console.log(natez['f' + nameKey]);
+console.log(natez['l' + nameKey]);
+
+const intrestedIn = prompt("what do you need to know about natez? Choose between fName, lName, age, job and school");
+if(natez[intrestedIn]){
+    alert(natez[intrestedIn]);
+} else {
+    prompt("wrong!what do you need to know about natez? Choose between fName, lName, age, job and school")
+}
+natez.location = "Nairobi";
+natez["social"] = "nathanburugu23@gmail.com"
+console.log(natez)
