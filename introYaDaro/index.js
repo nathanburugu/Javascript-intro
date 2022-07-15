@@ -103,3 +103,104 @@ if( paka >= 31 || paka < 0 ){
 } else if ((paka + mwisho) >= 0 && (paka + mwisho) <= 39){
     alert("please repeat the unit");
 } 
+// thursday 14th july
+var userInput = prompt(`please choose your favourite color 
+white
+blue
+red
+green
+`);
+switch(userInput) {
+    case "white":
+        alert('You seem to be very peaceful');
+        break;
+    case "blue":
+        alert('You seem to be very innovative');
+        break;
+    case "red":
+        alert('You seem to be very dangerous');
+        break;
+    case "green":
+        alert('You seem to be very social');
+        break;
+    default :
+        alert('please choose a valid color')
+    
+}
+
+const natesChainz = prompt(`please choose one the chains to win a prize
+gold
+silver
+bronze
+copper
+metal`);
+
+switch(natesChainz){
+ case 'gold' :
+    alert('you have been awarded 20ksh');
+    break;
+case 'silver' :
+    alert('you have been awarded 70ksh');
+    break;
+case 'bronze' :
+    alert('you have been awarded 500ksh');
+    break;
+case 'copper' :
+    alert('you have been awarded 250ksh');
+    break;
+case 'metal' :
+    alert('you have been awarded 2000ksh');
+    break;
+default:
+    alert('please choose wisely')
+}
+const kukula = prompt(` Leo Utakula nini?
+Rice 
+Ugali
+indomine
+Cabbage
+mrenda`)
+switch(kukula){
+    case 'rice':
+        alert('Leo Utakula Rice na beans');
+        break;
+    case 'ugali':
+        alert('Leo unakula ugali na nyama')
+        break;
+    case 'indomine':
+        alert('Leo unakula indomine fala wewe')
+        break;
+    case 'cabbage':
+        alert('Leo unakula ugali na cabbage')
+        break;
+    case 'mrenda':
+        alert('Leo unakula ugali na mrenda')
+        break;
+    default:
+        alert('chagua vizuri nani!')
+}
+
+//CLASS QUIZ
+
+const toPay = prompt('Total Price')
+    if(toPay >= 7000){
+        const discount = toPay * (15 / 100);
+        const total = toPay - discount;
+        alert(`You have a discount of ${discount} you should pay ${total}`);
+    }else if(toPay >= 5000 && toPay <= 6999){
+        const discount = toPay * (10 / 100);
+        const total = toPay - discount;
+        alert(`You have a discount of ${discount} you should pay ${total}`);
+    } else if (toPay >= 3000 && toPay <= 4999){
+        const discount = toPay * (5 / 100);
+        const total = toPay - discount;
+        alert(`You have a discount of ${discount} you should pay ${total}`);
+    }else if (toPay >= 1000 && toPay <= 2999){
+        const discount = toPay * (2 / 100);
+        const total = toPay - discount;
+        alert(`You have a discount of ${discount} you should pay ${total}`);
+    } else if (toPay <= 999 && toPay > 0){
+        alert(`You have no discount pay ${toPay}`); 
+    } else {
+        alert('You have entered an invalid amount');
+    }
