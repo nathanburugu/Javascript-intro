@@ -198,6 +198,30 @@ const tip = calcTip(bills[0]);
 const totalZ = bills[0] + tip;
 console.log(tip);
 console.log(totals, tipz);
+//CLASS QUIZ
+
+const toPay = prompt('Total Price')
+    if(toPay >= 7000){
+        const discount = toPay * (15 / 100);
+        const total = toPay - discount;
+        alert(`You have a discount of ${discount} you should pay ${total}`);
+    }else if(toPay >= 5000 && toPay <= 6999){
+        const discount = toPay * (10 / 100);
+        const total = toPay - discount;
+        alert(`You have a discount of ${discount} you should pay ${total}`);
+    } else if (toPay >= 3000 && toPay <= 4999){
+        const discount = toPay * (5 / 100);
+        const total = toPay - discount;
+        alert(`You have a discount of ${discount} you should pay ${total}`);
+    }else if (toPay >= 1000 && toPay <= 2999){
+        const discount = toPay * (2 / 100);
+        const total = toPay - discount;
+        alert(`You have a discount of ${discount} you should pay ${total}`);
+    } else if (toPay <= 999 && toPay > 0){
+        alert(`You have no discount pay ${toPay}`); 
+    } else {
+        alert('You have entered an invalid amount');
+    }
 
 // how it was done in the lecture
 const pangaChai = function(billYako){
@@ -209,13 +233,25 @@ const natez = {
     birthYear: 1999,
     job: "Student",
     school: "KCA",
-    hasDriversLicence: true,
+    hasDriversLicense: false,
 
-    calcAge : function(birthYear){
-    return 2022 - birthYear
+    // calcAge : function(){
+    // console.log(this)
+    // return 2022 - this.birthYear
+    // }
+    calcAge: function() {
+        this.age = 2022 - this.birthYear;
+        return this.age
+    },
+
+    getSummary: function() {
+        return `${this.fName} is a ${this.calcAge()} year old  ${this.job}, and he has ${this.hasDriversLicense ? "a" : "no"} drivers license.`
     }
 };
-console.log(natez.calcAge(1912));
+console.log(natez.calcAge());
+console.log(`${natez.fName} is a ${natez.age} year old ${natez.job}, and he schools at ${natez.school}  and he has ${natez.hasDriversLicense ? "a" : "no"} drivers license`)
+console.log(natez.getSummary())
+console.log(natez.age)
 console.log(natez);
 console.log(natez.lName);
 console.log(natez["fName"]);
@@ -233,3 +269,62 @@ if(natez[intrestedIn]){
 natez.location = "Nairobi";
 natez["social"] = "nathanburugu23@gmail.com"
 console.log(natez)
+
+//challange 3 my way
+const mark = {
+    fullName: "Mark Kinuthia",
+    mass: 78,
+    height: 1.69,
+
+    calcBmi: function() {
+        const markBMI = this.mass / (this.height * this.height);
+        return markBMI;
+    }
+
+}
+const john = {
+    fullName: "John Kaguna",
+    mass: 92,
+    height: 1.95,
+
+    calcBmi: function() {
+        const markBMI = this.mass / (this.height * this.height);
+        return markBMI;
+    }
+
+}
+if(`${mark.calcBmi()} > ${john.calcBmi()}`) {
+    console.log(`${mark.fullName}'s BMI (${mark.calcBmi()}) is higher than ${john.fullName}'s BMI (${john.calcBmi()})  `)
+} else {
+    console.log(`${john.fullName}'s BMI (${john.calcBmi()}) is higher than ${mark.fullName}'s BMI (${mark.calcBmi()})  `)
+}
+
+// lecturers way
+const x = {
+    fullNames: 'ule x',
+    mass: 78,
+    height: 1.69,
+    calcBmi: function() {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi
+    }
+}
+const y = {
+    fullNames: 'ule y',
+    mass: 92,
+    height: 1.95,
+    calcBmi: function() {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi
+    }
+
+
+}
+y.calcBmi();
+x.calcBmi();
+console.log(y.bmi)
+if(x.bmi > y.bmi) {
+    console.log(`${x.fullNames} BMI (${x.bmi}) is higher than ${y.fullNames} BMI (${y.bmi})`);
+} else {
+    console.log(`${y.fullNames} BMI (${y.bmi}) is higher than ${x.fullNames} BMI (${x.bmi})`);
+};
