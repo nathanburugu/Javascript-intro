@@ -328,3 +328,124 @@ if(x.bmi > y.bmi) {
 } else {
     console.log(`${y.fullNames} BMI (${y.bmi}) is higher than ${x.fullNames} BMI (${x.bmi})`);
 };
+
+//for loop keeps running when condition is true
+for(let rep = 1; rep <=10; rep++) {
+    console.log(`lifting weights repetition ${rep}` );
+}
+
+const natesArray = [
+    'nathan',
+    'burugu',
+    2022 - 1999,
+    'teacher',
+    ['nate', 'ate', 'bate']
+];
+const types = [];
+for(let i = 0; i >= 0 && i <=4 && i < natesArray.length; i++){
+    //reading from natesArray
+    console.log(natesArray[i], typeof natesArray[i]);
+    //filing types array
+    // types[i] = typeof natesArray[i];
+    types.push(typeof natesArray[i])
+}
+console.log(types)
+
+const miakaYe =[1992,1993,1996,1993]
+const ages =[];
+for (let i =0;i<miakaYe.length;i++){
+    ages.push(2022-miakaYe[i]);
+}
+console.log(ages)
+//continue and break
+console.log(`----only strings---`);
+for (let i =  0; i <natesArray.length; i++){
+    if(typeof natesArray[i] !== 'string') continue;
+    console.log(natesArray[i], typeof natesArray[i])
+}
+//break
+console.log(`----break with number ---`);
+for (let i =  0; i <natesArray.length; i++){
+    if(typeof natesArray[i] === 'number') break;
+    console.log(natesArray[i], typeof natesArray[i])
+}
+//looping backwards and loops in loops
+const boyz = [
+    'kiki',
+    'buba',
+    2022 - 1999,
+    'student',
+    ['nate', 'ate', 'bate']
+]
+for(let i = boyz.length - 1; i >= 0; i--){
+    console.log(boyz[i]);
+}
+
+for(let excercise =1;excercise < 10; excercise++){
+    console.log(`----------------starting excercise ${excercise}`);
+    for(let rep = 1; rep < 6; rep++){
+        console.log(`Excercise ${excercise} lifting weight repetition${rep}`)
+    }
+}
+// while loops
+let rep = 1;
+
+while ( rep <= 10) {
+    console.log(` while loop lifting weights repetition ${rep}`);
+    rep++;
+
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1; 
+console.log(dice);
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`)
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice ===  6) console.log(`loop is about to end ....`)
+}
+//coding challange
+const billz = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52 ];
+const tips = [];
+const total = [];
+for (let i = 0; i < billz.length; i++) {
+    const bill = billz[i]
+    if (bill >= 50 && bill <= 300){
+        tips.push(bill * (15 / 100));  
+        total.push(bill + (bill * (20 / 100)))
+
+    }else {
+        tips.push (bill * (20 / 100));
+        total.push(bill + (bill * (15 / 100)))
+    }
+console.log(total);
+// console.log(billz[i])
+// console.log(tips[i])
+// console.log(total[i])
+console.log(`Your Bill was ${billz[i]} but you got a discount of ${tips[i]} now you get to pay ${total[i]}`)
+}
+//how the lec did it
+const pangaChaiz = function(billYako){
+    return billYako >= 50 && billYako <= 300 ? billYako * (15 / 100) : billYako * (20 / 100);
+}
+const billz2 = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52 ];
+const tips2 = [];
+const total2 = [];
+for(let i = 0; i < billz2.length ; i++) {
+    const tip = pangaChaiz(billz2[i])
+    tips2.push(tip);
+    total2.push(tip + billz2[i]);
+
+}
+console.log(tips2, total2, );
+
+const calcAverage = function(arr) {
+    let sum = 0;
+    for(let i = 0; i < arr.length ; i++) {
+        // sum = sum + arr[i]
+        sum += arr[i];
+    }
+console.log(sum);
+return sum/arr.length
+}
+console.log(calcAverage([2, 3, 7]))
+console.log((calcAverage(total2)));
