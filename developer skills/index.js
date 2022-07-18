@@ -64,3 +64,77 @@ const calcTempAmplitudeNew = function (t1, t2) {
 };
 const amplitudeNew = calcTempAmplitudeNew([3, 5, 1], [9, 0, 5]);
 console.log(amplitudeNew);
+
+const measureKelvin = function () {
+  const measurement = {
+    type: "temp",
+    unit: "celcius",
+    // value: parseInt(prompt("degrees celcius")),
+    value: 10,
+  };
+  const kelvin = measurement.value + 273;
+  return kelvin;
+};
+console.log(measureKelvin());
+// using a debugger
+const calcTempAmplitudeBug = function (t1, t2) {
+  const temps = t1.concat(t2); // to add two arrays together
+  let max = temps[0];
+  let min = temps[0];
+  console.log(temps);
+  for (let i = 0; i < temps.length; i++) {
+    const curTemp = temps[i];
+    if (typeof curTemp !== "number") continue;
+    if (curTemp > max) {
+      max = curTemp;
+    }
+    if (curTemp < min) {
+      min = curTemp;
+    }
+  }
+  console.log(max, min);
+  return max - min;
+};
+const amplitudeBug = calcTempAmplitudeBug([3, 5, 1], [9, 4, 5]);
+console.log(amplitudeBug);
+
+//challange
+const dayz1 = [17, 21, 23];
+const dayz2 = [12, 5, -5, 0, 4];
+const siku = [];
+const printForecast = function (arr) {
+  let temp = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    const curTemp = arr[i];
+    const curDay = i + 1;
+    console.log(`it is ${curTemp} degress celcius in day ${curDay}`);
+  }
+};
+// printForecast([2, 7, 5]);
+const degrees = printForecast(dayz1);
+const degrees2 = printForecast(dayz2);
+console.log(degrees);
+//i wasnt able to complete it my problem was adding the number of days which i was overthinking the correct way to add the number of days in an incrementig way is to just add one to the interartion
+//1UNDERSTANDING THE PROBLEM
+//- Array transformed to string seperated by 3 dots
+//-wjat is the X days?Answer index plus one
+//2 BREAKING UP INTO SUB PROBLEMS
+//-transform array into a string
+//-transorm each elemnt to string with degres celcius
+//-strings need to contain day(index+1)
+//- add ... between elements and start and end of string
+//-log string to console
+const data1 = [17, 21, 23];
+const data2 = [22, 5, -5, 0, 4];
+//if the array was as short as test data 1 we would hardcode it like this
+console.log(
+  `${data1[0]} degress celcius ...${data1[1]} degress celcius... ${data1[2]} degress celcius`
+); // but we need a more dynamic way to do this
+const printiForcast = function (arr) {
+  let str = "";
+  for (let i = 0; i < arr.length; i++) {
+    str += `${arr[i]}c in ${i + 1} day(s) ... `; // str += is the same as str = str + ....
+  }
+  console.log("..." + str);
+};
+printiForcast(data1);
