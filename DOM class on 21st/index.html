@@ -4,15 +4,135 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css" />
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
     <title>JavaScript Classes IST</title>
   </head>
   <body>
-    <div class="container">
-      <div class="header"></div>
+    <!-- navbar started -->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <!-- logo goes here -->
+          <a class="navbar-brand" href="home.html" id="nav-a">ASTRODREAM</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0" id="nav-ul">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="home.html"
+                  id="nav-a"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="book.html" id="nav-a">Book trip</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html" id="nav-a "> About Us </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="shop.html" id="nav-a"
+                  >Our shop <i class="fas fa-shopping-cart"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="register.html" id="nav-a">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="great.html" id="nav-a">Tours</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="why.html"
+                  id="navbarDropdown nav-a"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  More
+                </a>
+                <ul
+                  class="dropdown-menu"
+                  aria-labelledby="navbarDropdown"
+                  id="nav-ul"
+                >
+                  <li>
+                    <a class="dropdown-item" href="why.html" id="nav-a"
+                      >Why us</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="contact.html" id="nav-a"
+                      >Contact us</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="travel.html" id="nav-a"
+                      >Travel Gear</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="test.html" id="nav-a"
+                      >Testimonials</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto" id="nav-ul">
+              <button class="btn">Get A Quote</button>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- navbar ending -->
+    <div class="containerMain">
+      <div class="header2"></div>
       <div class="left"></div>
+
       <div class="main">
-        <h3>Simple Calculator</h3>
+        <div class="head">
+          <button class="pass">new passenger</button>
+          <button class="km">kilometers</button>
+        </div>
+
+        <div class="one">
+          <h4>Distance you wish to travel</h4>
+          <input class="distance" id="name" placeholder="  Distance" />
+        </div>
+        <div class="two">
+          <h4>You get to Pay</h4>
+          <input class="toPay" id="dis" placeholder=" Pay" />
+          <button></button>
+        </div>
+        <div class="three">
+          <button class="pay" id="pay">Check price</button>
+        </div>
+        <!-- <h3>Simple Calculator</h3>
         <input class="in" type="text" id="num1" /> <br />
         <input class="in" type="text" id="num2" /> <br />
         <input class="in" type="text" id="answer" /> <br />
@@ -21,10 +141,141 @@
         "
         >
           ADD
-        </button>
+        </button> -->
       </div>
+      <div class="right"></div>
       <div class="footer"></div>
     </div>
+    <!-- navbar ending -->
+
+    <!-- footer started here -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+      <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left">
+          <!-- company name -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase font-weight-bold text-warning">
+              Elementaita adventures
+            </h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              quaerat nihil quae odio, vel soluta amet eligendi perferendis
+              sapiente repellendus!
+            </p>
+          </div>
+          <!-- services  -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
+              Services
+            </h5>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >Thw Peoviders</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >Thw Peoviders</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >Thw Peoviders</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >Thw Peoviders</a
+              >
+            </p>
+          </div>
+          <!-- Usefull links -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
+              Usefull Links
+            </h5>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >Your Account</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >Book a trip</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >Trip Rates</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >Helps</a
+              >
+            </p>
+          </div>
+          <!-- Contacts -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
+              Contacts
+            </h5>
+            <p><i class="fas fa-home mr-3"></i>Nairobi, Nbi 2333, KE</p>
+            <p><i class="fas fa-envelope mr-3"></i>TeamElementaita@gmail.com</p>
+            <p><i class="fas fa-phone mr-3"></i>+254 12345678</p>
+            <p><i class="fas fa-print mr-3"></i>+245 87654321</p>
+          </div>
+        </div>
+        <!-- copyright and social icons sections-->
+        <hr class="mb-4" />
+        <div class="row align-items-center">
+          <!-- copyrights starts here -->
+          <div class="col-md-7 col-lg-8">
+            <p>
+              Copyright Team ELEMENTAITA All rights Reserved by:
+              <a href="#" style="text-decoration: none">
+                <strong>ELEMENTAITA</strong>
+              </a>
+            </p>
+          </div>
+          <!-- copyrights ends here -->
+          <!-- social links start here  -->
+          <div class="col-md-5 col-lg-4">
+            <div class="text-center text-md-right">
+              <ul class="list-unstyled list-inline">
+                <li class="list-inline-item">
+                  <a href="#" class="btn btn-primary btn-sm"
+                    ><i class="fab fa-facebook"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="btn btn-primary btn-sm"
+                    ><i class="fab fa-instagram" aria-hidden="true"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="btn btn-primary btn-sm"
+                    ><i class="fab fa-twitter" aria-hidden="true"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="btn btn-primary btn-sm"
+                    ><i class="fab fa-github" aria-hidden="true"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="btn btn-primary btn-sm"
+                    ><i class="fab fa-pinterest" aria-hidden="true"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- social links end here -->
+        </div>
+        <!-- copyrights and social links end here -->
+      </div>
+    </footer>
     <script src="index.js"></script>
   </body>
 </html>
