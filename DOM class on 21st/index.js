@@ -35,6 +35,18 @@ function kulipa() {
 //   document.querySelector(".toPay").reset;
 //   document.querySelector(".distance").reset;
 // });
+const storeFare = document.querySelector(".pass");
+let fare = [];
+for (let x = 0; x < storeFare.length; x++) {
+  (function () {
+    storeFare[x].addEventListener("click", function () {
+      fare[x] = this.textContent;
+      console.log(fare[x]);
+    });
+  });
+}
+
+//origi
 document.querySelector(".pay").addEventListener("click", function () {
   let fares = [];
   for (let i = 0; i < 14; i++) {
@@ -42,37 +54,42 @@ document.querySelector(".pay").addEventListener("click", function () {
     if (distance >= 1 && distance <= 10) {
       document.querySelector(".toPay").value = 1 * 100;
       fares.push(distance);
-      seats--;
     } else if (distance >= 11 && distance <= 50) {
       document.querySelector(".toPay").value = 1 * 300;
       fares.push(distance);
-      seats--;
     } else if (distance >= 51 && distance <= 100) {
       document.querySelector(".toPay").value = 1 * 500;
       fares.push(distance);
-      seats--;
     } else if (distance >= 101 && distance <= 200) {
       document.querySelector(".toPay").value = 1 * 1000;
       fares.push(distance);
-      seats--;
     } else if (distance >= 201 && distance <= 300) {
       document.querySelector(".toPay").value = 1 * 1200;
       fares.push(distance);
-      seats--;
     } else if (distance >= 301 && distance <= 400) {
       document.querySelector(".toPay").value = 1 * 1500;
       fares.push(distance);
-      seats--;
     } else if (distance >= 401) {
       console.log("distance to long");
     }
   }
+  console.log(fares);
 });
+
+const storeFare2 = document.querySelector(".pass");
+let fare2 = [];
+for (let x = 0; x < storeFare.length; x++) {
+  (function () {
+    storeFare[x].addEventListener("click", function () {
+      fare[x] = this.textContent;
+      console.log(fare[x]);
+    });
+  });
+}
 
 document.querySelector(".pass").addEventListener("click", function () {
   document.querySelector(".toPay").value = "";
   document.querySelector(".distance").value = "";
-  document.querySelector(".new").textConent = seats;
 });
 
 /*

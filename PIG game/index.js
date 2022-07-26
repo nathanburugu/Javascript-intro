@@ -11,14 +11,28 @@ const btnNew = document.querySelector(".btn--new");
 const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
 //starting conditions
-score0El.textContent = 0;
-score1El.textContent = 0;
-diceEl.classList.add("hidden");
+let scores, currentScore, activePlayer, playing;
+
 // we set the cuurent score variable here
-const scores = [0, 0];
-let currentScore = 0;
-let activePlayer = 0;
-let playing = true;
+
+const init = function () {
+  //starting conditions
+  // we set the cuurent score variable here
+  scores = [0, 0];
+  currentScore = 0;
+  activePlayer = 0;
+  playing = true;
+  score0El.textContent = 0;
+  score1El.textContent = 0;
+  current0El.textContent = 0;
+  current1El.textContent = 0;
+  diceEl.classList.add("hidden");
+  player0El.classList.remove(`player--winner`);
+  player1El.classList.remove("player--winner");
+  player0El.classList.add(`player--active`);
+  player1El.classList.remove(`player--active`);
+};
+init();
 
 //function for switching players
 const switchPlayer = function () {
@@ -79,3 +93,4 @@ btnHold.addEventListener("click", function () {
   }
   //finish the game
 });
+btnNew.addEventListener("click", init);
