@@ -1,36 +1,19 @@
-// setInterval(setClock, 1000);
-
-// const hourHand = document.querySelector("[data-hour-hand]");
-// const minuteHand = document.querySelector("[data-minute-hand]");
-// const secondHand = document.querySelector("[data-seconds-hand]");
-// function setClock() {
-//   const currentDate = new Date();
-//   const secondsRatio = currentDate.getSeconds() / 60;
-//   const minutesRatio = (secondsRatio + currentDate.getMinutes()) / 60;
-//   const hoursRatio = (minutesRatio + currentDate.getHours()) / 12;
-//   setRotation(secondHand, secondsRatio);
-//   setRotation(minuteHand, minutesRatio);
-//   setRotation(hourHand, hoursRatio);
-// }
-// function setRotation(element, rotationRatio) {
-//   element.style.setProperty("--rotation", rotationRatio * 360);
-// }
-setInterval(setClock, 1000);
-
+setInterval(clock, 1000);
 const hourHand = document.querySelector("[data-hour-hand]");
 const minuteHand = document.querySelector("[data-minute-hand]");
-const secondHand = document.querySelector("[data-seconds-hand]");
+const secondHand = document.querySelector("[data-second-hand]");
 
-function setClock() {
-  const currentDate = new Date();
-  const secondsRatio = currentDate.getSeconds() / 60;
-  const minutesRatio = (secondsRatio + currentDate.getMinutes()) / 60;
-  const hoursRatio = (minutesRatio + currentDate.getHours()) / 12;
-  setRotation(secondHand, secondsRatio);
-  setRotation(minuteHand, minutesRatio);
-  setRotation(hourHand, hoursRatio);
+function clock() {
+  const currentTime = new Date();
+  const secondRotation = currentTime.getSeconds() / 60;
+  const minuteRotation = (secondRotation + currentTime.getMinutes()) / 60;
+  const hourRotation = (minuteRotation + currentTime.getHours()) / 12;
+
+  rotation(secondHand, secondRotation);
+  rotation(minuteHand, minuteRotation);
+  rotation(hourHand, hourRotation);
 }
-function setRotation(element, rotationRatio) {
-  element.style.setProperty("--rotation", rotationRatio * 360);
+function rotation(hand, ratio) {
+  hand.style.transform = "translateX(-50%) rotate($ {ratio * 360}deg)";
 }
-setClock();
+clock();
