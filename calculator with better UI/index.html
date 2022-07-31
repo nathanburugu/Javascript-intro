@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <form class="calculator" name="calc">
+        <input type="text" class="value" readonly name="txt" />
+        <span class="num" onclick="calc.txt.value=''"><i>c</i></span>
+        <span class="num" onclick="calc.txt.value+='/'"><i>/</i></span>
+        <span class="num" onclick="calc.txt.value+='*'"><i>*</i></span>
+        <span class="num" onclick="calc.txt.value+='7'"><i>7</i></span>
+        <span class="num" onclick="calc.txt.value+='8'"><i>8</i></span>
+        <span class="num" onclick="calc.txt.value+='9'"><i>9</i></span>
+        <span class="num" onclick="calc.txt.value+='-'"><i>-</i></span>
+        <span class="num" onclick="calc.txt.value+='4'"><i>4</i></span>
+        <span class="num" onclick="calc.txt.value+='5'"><i>5</i></span>
+        <span class="num" onclick="calc.txt.value+='6'"><i>6</i></span>
+        <span class="num" onclick="calc.txt.value+='+'"><i>+</i></span>
+        <span class="num" onclick="calc.txt.value+='1'"><i>1</i></span>
+        <span class="num" onclick="calc.txt.value+='2'"><i>2</i></span>
+        <span class="num" onclick="calc.txt.value+='3'"><i>3</i></span>
+        <span class="num" onclick="calc.txt.value+='0'"><i>0</i></span>
+        <span class="num" onclick="calc.txt.value+='00'"><i>00</i></span>
+        <span class="num" onclick="calc.txt.value+='.'"><i>.</i></span>
+
+        <span
+          class="num"
+          onclick="document.calc.txt.value=eval(clac.text.value)"
+          ><i>=</i></span
+        >
+      </form>
+    </div>
+    <!-- <div class="calculator-grid">
+      <div class="output">
+        <div data-previous-operand class="previous-operand"></div>
+        <div data-current-operand class="current-operand"></div>
+      </div>
+      <button data-all-clear class="span-2">AC</button>
+      <button data-delete>DEL</button>
+      <button data-operation>/</button>
+      <button data-number>1</button>
+      <button data-number>2</button>
+      <button data-number>3</button>
+      <button data-operation>*</button>
+      <button data-number>4</button>
+      <button data-number>5</button>
+      <button data-number>6</button>
+      <button data-operation>+</button>
+      <button data-number>7</button>
+      <button data-number>8</button>
+      <button data-number>9</button>
+      <button data-operation>-</button>
+      <button data-number>.</button>
+      <button data-number>0</button>
+      <button data-equals class="span-2">=</button>
+    </div> -->
+    <script src="index.js"></script>
+  </body>
+</html>
