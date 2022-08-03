@@ -22,10 +22,20 @@
 // };
 
 class Student {
-  constructor(name = "nate", email = "nate@gmail.com", grade) {
+  constructor(
+    name = "nate",
+    email = "nate@gmail.com",
+    grade,
+    age,
+    residence,
+    sport
+  ) {
     this.name = name;
     this.email = email;
     this.grade = grade;
+    this.age = age;
+    this.residence = residence;
+    this.sport;
   }
   login() {
     console.log(this.name, "has logged in");
@@ -51,10 +61,22 @@ class Student {
     }
   }
 }
+class Studentparents extends Student {
+  // constructor(name, email, age) {
+  //   this.name = name;
+  //   this.email = email;
+  //   this.age = age;
+  // }
+  login() {
+    console.log(this.name, "HAS LOGGED IN TO THIS DEVICE");
+  }
+}
 var student1 = new Student("Nathan Burugu", "nathan@gmail.com", 50);
 student1.login().logout();
 var student2 = new Student("Badman Bad", "BadmAn@gmail.com", 70);
 var student3 = new Student();
+var parent1 = new Studentparents("jackline wangari");
+parent1.login();
 
 // class Teams extends Student {
 //    constructor(){
