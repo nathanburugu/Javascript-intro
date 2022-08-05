@@ -12,6 +12,7 @@ document.querySelector(".multiply").addEventListener("click", function () {
 
   let results = number1 * number2;
   console.log(results);
+  w;
   displayResult(`the answer is ${results}`);
   //   document.querySelector(".matokea").textContent = results;
   //   let results = number1 * number2;
